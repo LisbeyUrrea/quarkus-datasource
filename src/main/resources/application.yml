@@ -1,0 +1,27 @@
+# Configuration file
+
+#greeting.message=Hello World
+#greeting.suffix=!!, How are you???
+#
+quarkus:
+  hibernate-orm:
+    dialect: org.hibernate.dialect.PostgreSQL82Dialect
+    database:
+      generation: drop-and-create
+  datasource:
+    db-kind: postgresql
+    jdbc:
+      min-size: 3
+      max-size: 13
+      driver: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/quarkus
+    username: postgres
+    password: 123456
+  http:
+    port: 8443
+    test-port: 8083 #si se pone este valor en cero (0) se correran las pruebas en un puerto random
+    cors:
+      ~: true
+      methods: GET,PUT,POST
+      origins: http://example.com
+      headers: accept,authorization,content-type,x-requested-with
