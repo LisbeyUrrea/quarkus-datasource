@@ -12,4 +12,5 @@ public class ProductRepository implements PanacheRepository<Product> {
     public Optional<Product> findBySector(String sector) {
         return Optional.ofNullable(find("sector", sector).firstResult());
     }
+
 }

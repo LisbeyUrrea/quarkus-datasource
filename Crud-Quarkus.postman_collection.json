@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "b7dc49c6-3bfd-4baf-882e-638099f136bd",
+		"name": "Crud-Quarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Dominio}}:{{Puerto}}/init/delete/product/2",
+					"host": [
+						"{{Dominio}}"
+					],
+					"port": "{{Puerto}}",
+					"path": [
+						"init",
+						"delete",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Dominio}}:{{Puerto}}/init/product/2",
+					"host": [
+						"{{Dominio}}"
+					],
+					"port": "{{Puerto}}",
+					"path": [
+						"init",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Dominio}}:{{Puerto}}/init/products",
+					"host": [
+						"{{Dominio}}"
+					],
+					"port": "{{Puerto}}",
+					"path": [
+						"init",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Lisbey Urrea\",\n    \"sector\":\"1234\",\n    \"brand\":\"xxx\",\n    \"price\":150.000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dominio}}:{{Puerto}}/init/edit/products/1",
+					"host": [
+						"{{Dominio}}"
+					],
+					"port": "{{Puerto}}",
+					"path": [
+						"init",
+						"edit",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\":\"Otro nombre \",\n    \"sector\":\"1234\",\n    \"brand\":\"xxx\",\n    \"price\":130.000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Dominio}}:{{Puerto}}/init/add/products",
+					"host": [
+						"{{Dominio}}"
+					],
+					"port": "{{Puerto}}",
+					"path": [
+						"init",
+						"add",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
