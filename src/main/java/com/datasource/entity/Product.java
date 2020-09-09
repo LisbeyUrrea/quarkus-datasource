@@ -20,6 +20,15 @@ public class Product extends PanacheEntityBase {
     public String brand;
     public Double price;
 
+    public Product() {
+    }
+
+    public Product(String name, String sector, String brand, Double price) {
+        this.name = name;
+        this.sector = sector;
+        this.brand = brand;
+        this.price = price;
+    }
 
     public Long getId() {
         return id;
@@ -59,5 +68,16 @@ public class Product extends PanacheEntityBase {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sector='" + sector + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

@@ -15,7 +15,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 @ApplicationScoped
 @Path("/init")
@@ -31,8 +30,7 @@ public class GreetingResource {
     @Path("/products")
     @Produces("application/json")
     public Response getProduct(){
-        List<Product> prod = productService.getProduct();
-        return Response.ok(prod).build();
+        return Response.ok(productService.getProduct()).build();
     }
 
     @GET
